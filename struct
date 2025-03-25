@@ -1,0 +1,71 @@
+tournoi-flechettes-app/
+├── public/
+│   ├── images/
+│   │   ├── logo.svg
+│   │   └── darts-background.jpg
+│   └── favicon.ico
+├── src/
+│   ├── app/
+│   │   ├── admin/
+│   │   │   ├── page.tsx          # Page principale d'admin
+│   │   │   ├── tournois/
+│   │   │   │   ├── page.tsx      # Gestion des tournois
+│   │   │   │   └── [id]/         # Pages de tournoi spécifique
+│   │   │   │       ├── page.tsx
+│   │   │   │       └── matches/  # Gestion des matches
+│   │   │   ├── joueurs/          # Gestion des joueurs
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── [id]/page.tsx # Détails d'un joueur
+│   │   │   └── layout.jsx        # Layout admin
+│   │   ├── display/
+│   │   │   ├── page.tsx          # Affichage principal
+│   │   │   ├── bracket/page.tsx  # Affichage des brackets
+│   │   │   ├── matches/page.tsx  # Affichage des matches en cours
+│   │   │   └── layout.jsx        # Layout display (sans header, plein écran)
+│   │   ├── api/                  # API Routes
+│   │   │   ├── tournois/
+│   │   │   │   └── route.js      # GET, POST tournois
+│   │   │   ├── matches/
+│   │   │   │   └── route.js      # GET, POST, PUT matches
+│   │   │   └── joueurs/
+│   │   │       └── route.js      # GET, POST, PUT joueurs
+│   │   ├── page.tsx              # Page d'accueil
+│   │   ├── layout.jsx            # Layout principal
+│   │   └── globals.css           # Styles globaux
+│   ├── components/
+│   │   ├── ui/                   # Composants UI réutilisables
+│   │   │   ├── Button.jsx
+│   │   │   ├── Input.jsx
+│   │   │   ├── Select.jsx
+│   │   │   ├── PlayerCard.jsx
+│   │   │   └── ...
+│   │   ├── admin/                # Composants pour l'interface admin
+│   │   │   ├── TournamentForm.jsx
+│   │   │   ├── PlayerForm.jsx
+│   │   │   ├── MatchController.jsx
+│   │   │   ├── AdminNavigation.jsx
+│   │   │   └── ...
+│   │   └── display/              # Composants pour l'affichage
+│   │       ├── BracketDisplay.jsx
+│   │       ├── MatchCard.jsx
+│   │       ├── TournamentHeader.jsx
+│   │       └── ...
+│   ├── lib/
+│   │   ├── db.js                 # Configuration MySQL
+│   │   ├── tournamentUtils.js    # Logique de génération de tournoi
+│   │   └── bracketUtils.js       # Fonctions utilitaires pour les brackets
+│   ├── models/
+│   │   ├── joueur.js             # Modèle de joueur
+│   │   ├── tournoi.js            # Modèle de tournoi
+│   │   └── match.js              # Modèle de match
+│   └── hooks/
+│       ├── useTournament.js      # Hook personnalisé pour les tournois
+│       └── useLocalStorage.js    # Pour le mode hors ligne
+├── database/
+│   ├── schema.sql                # Structure de base de données
+│   └── seedData.sql              # Données de test
+├── .env.local                    # Variables d'environnement
+├── package.json
+├── tailwind.config.mjs
+├── next.config.js
+└── README.md

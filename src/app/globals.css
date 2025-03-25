@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 245, 245, 245;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Styles personnalisés pour l'application */
+.bracket-line {
+  @apply border-t-2 border-gray-300;
+}
+
+.match-card {
+  @apply border border-gray-200 rounded-lg p-4 bg-white transition-all;
+}
+
+.match-card.active {
+  @apply border-blue-500 shadow-md;
+}
+
+.match-card.complete {
+  @apply bg-gray-50;
+}
+
+.match-card.waiting {
+  @apply border-dashed;
+}
+
+.player-score {
+  @apply text-2xl font-bold;
+}
+
+/* Animation pour les transitions */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
