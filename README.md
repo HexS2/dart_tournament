@@ -1,3 +1,8 @@
+This project was developed using Claude 3.7 Sonnet to test what this AI could do, and to be honest, I'm pretty impressed.
+
+Some features may not be available yet.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
